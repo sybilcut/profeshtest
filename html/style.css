@@ -1,0 +1,223 @@
+body{
+    background-color: black;
+}
+
+div{
+    font-size: 32px;
+    font-family:"Courier New";
+}
+
+#title{
+    color: white;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left: 10%;
+    align-items: center;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    visibility: visible;
+   
+}
+
+.top{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    margin-left: 5%;
+    align-items: center;
+    height: 100px;
+    position: absolute;
+    top: 10%;
+    transform: translate(0%, -50%);
+    zoom: 0.75;
+    visibility: visible;
+}
+
+.button {
+    transform: translate(0%, -9%);
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 2%;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-family:"Courier New";
+    background-color: black;
+}
+
+.linebreak {
+    flex-basis: 100%;
+}
+
+#m1 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display:flex;
+}
+
+#m2 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display:flex;
+}
+
+#t1 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display:flex;
+    visibility: hidden;
+}
+
+#t2 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display:flex;
+    visibility: hidden;
+}
+
+#canvas {
+    font-size: 20px;
+    visibility: hidden;
+    display:flex;
+    position:absolute;
+    margin-left:5%;
+    top:40%;
+    color:white;
+}
+
+.slidein{
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+
+.slidein2{
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+    animation-name: slidein2;
+    animation-delay: 1s;
+    visibility: hidden;
+}
+
+.slideout{
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-name: slideout;
+    animation-delay: 0s;
+}
+
+.canslidein{
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-name: canslidein;
+    animation-iteration-count: 1;
+}
+
+.canslideout{
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-name: canslideout;
+    animation-iteration-count: 1;
+}
+
+.canupdate1{
+    animation-fill-mode:none;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name: canupdate;
+    animation-iteration-count: 1;
+}
+
+.canupdate2{
+    animation-fill-mode:forwards;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name: canupdate2;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes slidein {
+    from {
+        transform: translateX(-20vw);
+        opacity: 0%;
+    }
+    to {
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+@keyframes slidein2 {
+    from {
+        transform: translateX(-20vw);
+        opacity: 0%;
+    }
+    to {
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+
+
+@keyframes slideout {
+    from {
+    }
+    to {
+        transform: translateX(-80vw);
+        opacity: 0%;
+        visibility: visible;
+    }
+}
+
+@keyframes canslidein {
+    from {
+        transform: translateX(80vw);
+        opacity: 0%;
+    }
+    to {
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+
+@keyframes canslideout {
+    from {
+    }
+    to {
+        transform: translateX(50vw);
+        visibility: visible;
+        opacity: 0%;
+    }
+}
+
+@keyframes canupdate {
+    0% {
+    }
+    100% {
+        transform: translateX(-50vw);
+        visibility: visible;
+        opacity: 0%;
+    }
+}
+
+@keyframes canupdate2 {
+    0% {
+        transform: translateX(50vw);
+        visibility: visible;
+        opacity: 0%;
+    }
+    100% {
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+
